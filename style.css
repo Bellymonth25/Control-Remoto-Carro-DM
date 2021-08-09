@@ -1,60 +1,87 @@
 * {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 /*--------------------- Variables del Documento ---------------------*/
 
 :root {
-
-  }
+  --color-negro: #202020;
+  --color-gris-obscuro: #474747;
+  --color-gris-claro: #666666;
+  --color-blanco: #d9d9d9;
+  --color-amarillo-mostaza: #ffbd59;
+  --color-rojo: #ff1616;
+  --color-verde: #7ed957;
+}
 
 /*--------------------- Parámetros Globales ---------------------*/
 
 .container {
-    display: flex;
+  display: flex;
 }
 
+body {
+  background-color: var(--color-negro);
+}
 
- /*--------------------- Header Carrito ---------------------*/
+/*--------------------- Header Carrito ---------------------*/
 
 #titulo-carrito {
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  background-color: var(--color-gris-obscuro);
 }
 
 #titulo-carrito div {
-    background-color: blueviolet;
-    width: 25%;
-    height: 80px;
-}
-
-#titulo-carrito .titulo {
-    width: 50%;
-    background-color: aqua;
-    text-align: center;
-    font-size: 2em;
-    height: fit-content;
-}
-
-#titulo-carrito .ala-izquierda,
-#titulo-carrito .ala-derecha {
-    flex-direction: column;
-    background-color: coral;
-    padding: 15px 30px;
+  width: 30%;
+  height: 80px;
 }
 
 #titulo-carrito .ala-izquierda div,
 #titulo-carrito .ala-derecha div {
-    height: 15px;
-    margin-bottom: 15px;
-    width: 100%;
+  background-color: var(--color-blanco);
+}
+
+#titulo-carrito .ala-izquierda div:nth-child(2),
+#titulo-carrito .ala-derecha div:nth-child(2) {
+  background-color: var(--color-amarillo-mostaza);
+}
+
+#titulo-carrito .titulo {
+  width: 40%;
+  text-align: center;
+  font-size: 1.8em;
+  height: fit-content;
+  color: var(--color-blanco);
+}
+
+#titulo-carrito .ala-izquierda,
+#titulo-carrito .ala-derecha {
+  flex-direction: column;
+  padding: 25px 30px;
+}
+
+#titulo-carrito .ala-izquierda div,
+#titulo-carrito .ala-derecha div {
+  height: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 #titulo-carrito .ala-izquierda div:last-child,
 #titulo-carrito .ala-derecha div:last-child {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
+.separador {
+  content: "";
+  height: 10px;
+  background-color: var(--color-blanco);
+  width: 100%;
+}
