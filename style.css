@@ -26,6 +26,13 @@ body {
   background-color: var(--color-negro);
 }
 
+.separador {
+  content: "";
+  height: 10px;
+  background-color: var(--color-blanco);
+  width: 100%;
+}
+
 /*--------------------- Header Carrito ---------------------*/
 
 #titulo-carrito {
@@ -79,9 +86,74 @@ body {
   margin-bottom: 0px;
 }
 
-.separador {
-  content: "";
-  height: 10px;
-  background-color: var(--color-blanco);
-  width: 100%;
+/*--------------------- Contenido Principal ---------------------*/
+
+#main-carrito {
+  margin: 50px 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#velocidad {
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#velocidad div:last-child {
+  display: flex;
+  flex-direction: row;
+}
+
+#velocidad .circular-progress-text {
+  color: var(--color-blanco);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#text-100 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-left: 13.8rem;
+}
+
+#text-0 {
+  margin-left: -2px;
+}
+
+.circular-progress {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 15px 25px;
+}
+
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 15rem;
+  height: 7.5rem; /* Half circle (overflow) */
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 15rem; /* full circle! */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1.5rem solid var(--color-gris-claro); /* half gray, */
+  border-bottom-color: var(--color-amarillo-mostaza); /* half azure */
+  border-right-color: var(--color-amarillo-mostaza);
+  transform: rotate(150deg);
 }
