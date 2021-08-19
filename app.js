@@ -31,7 +31,7 @@ app.get("/publish/:action", (req, res) => {
       res.status(200).send(stderr);
     }
 
-    console.log("Published");
+    console.log("Published " + String(stdout));
     res.status(200).send(JSON.stringify({ status: "published" }));
   });
 });
